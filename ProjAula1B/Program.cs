@@ -4,9 +4,10 @@
     {
         static void Main(string[] args)
         {
-            var lst = ReadFile.GetData();
+            //var lst = ReadFile.GetData();
 
             //new FunctionDML().InsertData(lst);
+            new FunctionMongo().ProcessDataToMongoDB();
 
             //Console.WriteLine("Listar registros que tenham o numero do CPF iniciando com 237");
             //PrintData(TestFilter.FilterByCPF(lst));
@@ -23,8 +24,8 @@
             //Console.WriteLine("Ordenar a lista de registros pela razao social");
             //PrintData(TestFilter.FilterOrderBySocialReason(lst));
 
-            Console.WriteLine("Gerar XML");
-            Console.WriteLine(TestFilter.GenerateXML(lst));
+            //Console.WriteLine("Gerar XML");
+            //Console.WriteLine(TestFilter.GenerateXML(lst));
 
             static void PrintData(List<PenalidadesAplicadas> l)
             {
